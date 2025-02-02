@@ -204,13 +204,13 @@ def generate_single_plots():
     tables = extract_table_data(lines)
 
     # Create DataFrames and plot data for each conference
-    for conference_name, table_data in tables.items():
+    for (conference_name,short_conf_name), table_data in tables.items():
         df = create_dataframe(table_data)
         years = df['Year'].unique().tolist()
         acceptance_rates = df[df['Type'] == 'Acceptance Rate']['Value'].tolist()
         accepted_numbers = df[df['Type'] == 'Accepted']['Value'].tolist()
         submission_numbers = df[df['Type'] == 'Total']['Value'].tolist()
-        plot_ok(conference_name, years, submission_numbers, accepted_numbers, acceptance_rates)
+        plot_ok(short_conf_name, years, submission_numbers, accepted_numbers, acceptance_rates)
 
 def generate_all_plots():
     # Extract all tables
@@ -219,9 +219,9 @@ def generate_all_plots():
     # Combine data for all conferences
     combined_data = []
 
-    for conference_name, table_data in tables.items():
+    for (conference_name,short_conf_name), table_data in tables.items():
         df = create_dataframe(table_data)
-        df['Conference'] = conference_name
+        df['Conference'] = short_conf_name
         combined_data.append(df)
 
     combined_df = pd.concat(combined_data).reset_index(drop=True)

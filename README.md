@@ -2,72 +2,6 @@
 
 <img src="graphs/combined_plot.png" alt="">
 
-## Natural Language Processing and Computational Linguistics
-
-| **Name** | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
-| :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
-| **ACL** | Association for Computational Linguistics | Conference | 215 | | | 24.9% |
-| **EMNLP** | Empirical Methods in Natural Language Processing | Conference | 193 | | | 25.2% |
-| **NAACL-HLT** | North American Chapter of the Association for Computational Linguistics - Human Language Technologies | Conference | 132 | | | 28.1% |
-| **COLING** | International Conference on Computational Linguistics | Conference | 65 | | | 31.2% |
-| **CoNLL** | Conference on Natural Language Learning | Conference | 39 | | | 22.7% |
-
-<img src="graphs/multi/Natural Language Processing and Computational Linguistics_combined_plot.png" alt="">
-
-<details>
-  <summary><b><font size="4">ACL - Association for Computational Linguistics</font></b></summary>
-
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **ACL** | 26.2% (146/572) | 25.0% (173/692) | 28.0% (231/825) | 25.0% (195/751) | 25.3% (256/1018) | 25.7% (447/1737) | 25.4% (571/2244) | 24.5% (571/2327) | 20.8% (604/3378) | 23.5% (910/3872) |
-| **ACL Findings** | - | - | - | - | - | - | - | 14.6% (339/2327) | 31.4% (~361/3378) | 18.4% (712/3872) |
-
-<img src="graphs/singles/acl.png" alt="">
-
-</details>
-
-<details>
-  <summary><b><font size="4">EMNLP - Empirical Methods in Natural Language Processing</font></b></summary>
-
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **EMNLP** | 30.4% (155/510) | 26.2% (157/600) | 25.8% (177/687) | 25.8% (216/836) | 25.5% (351/1376) | 25.6% (465/1813) | 24.5% (602/2455) | 25.6% (650/2540) | 22.1% (715/3242) | 23.3% (901/3868) |
-| **EMNLP Findings** | - | - | - | - | - | - | 13.5% (332/2455) | 11.8% (300/2540) | 14.0% (453/3242) | 22.9% (886/3868) |
-
-<img src="graphs/singles/emnlp.png" alt="">
-</details>
-<details>
-  <summary><b><font size="4">NAACL - North American Chapter of the Association for Computational Linguistics</font></b></summary>
-
-| Year | 2013 | 2015 | 2016 | 2018 | 2019 | 2021 | 2022 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **NAACL-HLT - Long** | 30.4% (89/293) | 29.1% (117/402) | 25.3% (100/396) | 31.7% (205/647) | 26.3% (281/1067) | 27.9% (350/1254) | 17.0% (358/2103) |
-| **NAACL-HLT - Short** | 31.5% (51/162) | 22.1% (69/312) | 28.9% (82/284) | 29.4% (125/425) | 21.3% (142/666) | 23.3% (127/544) | 4.0% (84/2103) |
-<img src="graphs/singles/naacl.png" alt="">
-</details>
-
-<details>
-  <summary><b><font size="4">COLING - International Conference on Computational Linguistics</font></b></summary>
-
-| Year | 2012 | 2014 | 2016 | 2018 | 2020 | 2022 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **COLING** | ~25.0% (195/~780) | 31.7% (217/685) | 32.4% (337/1039) | 37.3% (331/888) | 33.4% (622/1862) | 33.4% (522/1563) |
-| **COLING - Short** | - | - | - | - | - | 24.2% (112/463) |
-<img src="graphs/singles/col.png" alt="">
-
-</details>
-
-<details>
-  <summary><b><font size="4">CoNLL - Conference on Natural Language Learning</font></b></summary>
-
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **CoNLL** | 24.1% (20/83) | 29.9% (38/127) | 20.1% (30/149) | 18.5% (50/271) | 20.8% (57/274) | 22.0% (97/441) | 23.3% (53/227) |
-<img src="graphs/singles/conll.png" alt="">
-
-</details>
-
-
 ## Computer Vision and Pattern Recognition
 
 | Name | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
@@ -109,9 +43,9 @@
 <details>
   <summary><b><font size="4">ECCV - European Conference on Computer Vision</font></b></summary>
 
-| Year | 2014 | 2016 | 2018 | 2020 | 2022 |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **ECCV** | 27.9% (363/1444) | 26.6% (415/1561) | 31.8% (776/2439) | 27.1% (1361/5025) | 19.9% (1629/8170) |
+| Year | 2014 | 2016 | 2018 | 2020 | 2022 | 2024 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ECCV** | 27.9% (363/1444) | 26.6% (415/1561) | 31.8% (776/2439) | 27.1% (1361/5025) | 19.9% (1629/8170) | 27.9% (2395/8585) |
 
 <img src="graphs/singles/eccv.png" alt="">
 
@@ -163,9 +97,9 @@
 <details>
   <summary><b><font size="4">ICLR - International Conference on Learning Representations</font></b></summary>
 
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **ICLR** | - | - | - | 39.1% (198/507) | 32.0% (314/981) | 31.4% (500/1591) | 26.5% (687/2594) | 28.7% (860/2997) | 32.9% (1095/3328) | 32.0% (1574/4956) | 30.81% (2250/7304) |
+| **ICLR** | - | - | - | 39.1% (198/507) | 32.0% (314/981) | 31.4% (500/1591) | 26.5% (687/2594) | 28.7% (860/2997) | 32.9% (1095/3328) | 32.0% (1574/4956) | 30.81% (2250/7304) | 31.75% (3706/11672) | 
 
 <img src="graphs/singles/iclr.png" alt="">
 
@@ -274,6 +208,72 @@
 | **ICASSP** | 48.0% (1709/3500) | 52.0% (1207/2322) | 47.0% (1265/2682) | 52.0% (1220/2518) | 49.7% (1406/2829) | 46.5% (1774/3815) | 48.0% (1734/3610) | 45.0% (1785/3967) | 45.1% (2765/6127) | 45.0% (~2812/5796) |
 
 <img src="graphs/singles/icassp.png" alt="">
+
+</details>
+
+
+## Natural Language Processing and Computational Linguistics
+
+| **Name** | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
+| :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
+| **ACL** | Association for Computational Linguistics | Conference | 215 | | | 24.9% |
+| **EMNLP** | Empirical Methods in Natural Language Processing | Conference | 193 | | | 25.2% |
+| **NAACL-HLT** | North American Chapter of the Association for Computational Linguistics - Human Language Technologies | Conference | 132 | | | 28.1% |
+| **COLING** | International Conference on Computational Linguistics | Conference | 65 | | | 31.2% |
+| **CoNLL** | Conference on Natural Language Learning | Conference | 39 | | | 22.7% |
+
+<img src="graphs/multi/Natural Language Processing and Computational Linguistics_combined_plot.png" alt="">
+
+<details>
+  <summary><b><font size="4">ACL - Association for Computational Linguistics</font></b></summary>
+
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ACL** | 26.2% (146/572) | 25.0% (173/692) | 28.0% (231/825) | 25.0% (195/751) | 25.3% (256/1018) | 25.7% (447/1737) | 25.4% (571/2244) | 24.5% (571/2327) | 20.8% (604/3378) | 23.5% (910/3872) |
+| **ACL Findings** | - | - | - | - | - | - | - | 14.6% (339/2327) | 31.4% (~361/3378) | 18.4% (712/3872) |
+
+<img src="graphs/singles/acl.png" alt="">
+
+</details>
+
+<details>
+  <summary><b><font size="4">EMNLP - Empirical Methods in Natural Language Processing</font></b></summary>
+
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **EMNLP** | 30.4% (155/510) | 26.2% (157/600) | 25.8% (177/687) | 25.8% (216/836) | 25.5% (351/1376) | 25.6% (465/1813) | 24.5% (602/2455) | 25.6% (650/2540) | 22.1% (715/3242) | 23.3% (901/3868) |
+| **EMNLP Findings** | - | - | - | - | - | - | 13.5% (332/2455) | 11.8% (300/2540) | 14.0% (453/3242) | 22.9% (886/3868) |
+
+<img src="graphs/singles/emnlp.png" alt="">
+</details>
+<details>
+  <summary><b><font size="4">NAACL - North American Chapter of the Association for Computational Linguistics</font></b></summary>
+
+| Year | 2013 | 2015 | 2016 | 2018 | 2019 | 2021 | 2022 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **NAACL-HLT - Long** | 30.4% (89/293) | 29.1% (117/402) | 25.3% (100/396) | 31.7% (205/647) | 26.3% (281/1067) | 27.9% (350/1254) | 17.0% (358/2103) |
+| **NAACL-HLT - Short** | 31.5% (51/162) | 22.1% (69/312) | 28.9% (82/284) | 29.4% (125/425) | 21.3% (142/666) | 23.3% (127/544) | 4.0% (84/2103) |
+<img src="graphs/singles/naacl.png" alt="">
+</details>
+
+<details>
+  <summary><b><font size="4">COLING - International Conference on Computational Linguistics</font></b></summary>
+
+| Year | 2012 | 2014 | 2016 | 2018 | 2020 | 2022 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **COLING** | ~25.0% (195/~780) | 31.7% (217/685) | 32.4% (337/1039) | 37.3% (331/888) | 33.4% (622/1862) | 33.4% (522/1563) |
+| **COLING - Short** | - | - | - | - | - | 24.2% (112/463) |
+<img src="graphs/singles/col.png" alt="">
+
+</details>
+
+<details>
+  <summary><b><font size="4">CoNLL - Conference on Natural Language Learning</font></b></summary>
+
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **CoNLL** | 24.1% (20/83) | 29.9% (38/127) | 20.1% (30/149) | 18.5% (50/271) | 20.8% (57/274) | 22.0% (97/441) | 23.3% (53/227) |
+<img src="graphs/singles/conll.png" alt="">
 
 </details>
 
