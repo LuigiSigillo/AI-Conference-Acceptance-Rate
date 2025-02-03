@@ -194,7 +194,7 @@
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **INTERSPEECH** | - | 51.0% (~743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) |
+| **INTERSPEECH** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) |
 
 <img src="graphs/singles/interspeech.png" alt="">
 
@@ -205,7 +205,7 @@
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2021 | 2022 | 2023 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **ICASSP** | 48.0% (1709/3500) | 52.0% (1207/2322) | 47.0% (1265/2682) | 52.0% (1220/2518) | 49.7% (1406/2829) | 46.5% (1774/3815) | 48.0% (1734/3610) | 45.0% (1785/3967) | 45.1% (2765/6127) | 45.0% (~2812/5796) |
+| **ICASSP** | 48.0% (1709/3500) | 52.0% (1207/2322) | 47.0% (1265/2682) | 52.0% (1220/2518) | 49.7% (1406/2829) | 46.5% (1774/3815) | 48.0% (1734/3610) | 45.0% (1785/3967) | 45.1% (2765/6127) | 45.0% (2812/5796) |
 
 <img src="graphs/singles/icassp.png" alt="">
 
@@ -372,3 +372,72 @@
 | **ISCAS** | IEEE International Symposium on Circuits and Systems | Conference | 41 | 98 | 98 | 53% |
 | **ACM MM** | ACM Multimedia | Conference | 101 | 60 | 90 | 27.7% |
 
+## How to add a new conference/journal data
+### If you want to add a journal or conference (without data for every year) to the list, you can follow the steps below:
+1. Find the appropriate category
+2. Add a line like below, if you do not have all the information just leave it blank but with the same spacing.
+```markdown 
+| Name | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
+| **Conf short name** | Conf full name | Conference | 233 | 28 | 42 | 30% |
+```
+
+### If you want to add a journal or conference with data for every year to the list, you can follow the steps below:
+1. Find the appropriate category
+2. Add this snippet inside the category tag you choose like below, if you do not have all the information just leave it with a - but with the same spacing.
+```html
+<details>
+  <summary><b><font size="4">Short_conf_name - Long conf name</font></b></summary>
+
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Short_conf_name** | - | 51.0% (~743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) |
+
+<img src="graphs/singles/interspeech.png" alt="">
+
+</details>
+```
+3. Add the image to line with the name of the conference/journal in lowercase and without spaces. Like in the example above, the image is interspeech.png
+
+### If you want to add a new info to a preexisting journal or conference with data for every year to the list, you can follow the steps below:
+1. Find the appropriate category
+2. Add the new info to the table. Suppose you wanto to add the year 2022 to the interspeech conference, you can add the following line to the interspeech table:
+```html
+<details>
+  <summary><b><font size="4">Short_conf_name - Long conf name</font></b></summary>
+
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Short_conf_name** | - | 51.0% (~743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) |
+
+<img src="graphs/singles/interspeech.png" alt="">
+
+</details>
+```
+Add this after | 2021 |
+```markdown
+| 2022 |
+```
+this after the previous | :---: |
+```markdown
+| :---: |
+```
+and the data after the previous year data:
+```markdown
+| 58.4% (963/1990) |
+```
+3. The final table should look like this:
+```html
+<details>
+  <summary><b><font size="4">Short_conf_name - Long conf name</font></b></summary>
+
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Short_conf_name** | - | 51.0% (~743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) | 58.4% (963/1990) |
+
+<img src="graphs/singles/interspeech.png" alt="">
+
+</details>
+```
+### If you want to update the graphs, you can follow the steps below:
+1. Run the generate_graphs.py script
+2. Open a pull request with the changes
