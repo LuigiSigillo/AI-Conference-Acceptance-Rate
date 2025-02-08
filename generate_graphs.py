@@ -4,9 +4,22 @@ import seaborn as sns
 import io
 import re
 import numpy as np
-# Read the markdown file
-with open('README.md', 'r') as f:
-    lines = f.readlines()
+def remove_emoji(text):
+    emoji_pattern = re.compile(
+        "["
+        "\U0001F600-\U0001F64F"  # emoticons
+        "\U0001F300-\U0001F5FF"  # symbols & pictographs
+        "\U0001F680-\U0001F6FF"  # transport & map symbols
+        "\U0001F1E0-\U0001F1FF"  # flags (iOS)
+        "\U00002702-\U000027B0"  # other symbols
+        "\U000024C2-\U0001F251"
+        "\U0001F900-\U0001F9FF"  # Supplemental Symbols and Pictographs
+        "\U0001FA70-\U0001FAFF"  # Symbols and Pictographs Extended-A
+        "\U0001F700-\U0001F77F"  # Alchemical Symbols
+        "\U0001F780-\U0001F7FF"  # Geometric Shapes Extended
+        "\U0001F800-\U0001F8FF"  # Supplemental Arrows-C
+        "]+", flags=re.UNICODE)
+    return emoji_pattern.sub(r'', text).strip()
 
 # Function to extract table data and macrocategory
 def extract_table_data(lines):
@@ -17,8 +30,11 @@ def extract_table_data(lines):
     macrocategory = None
 
     for line in lines:
+        if "to add a " in line:
+            break
         if line.startswith('##'):
             macrocategory = line.strip().replace('##', '').strip()
+            macrocategory = remove_emoji(macrocategory)
         elif '<summary>' in line:
             capture = True
             conference_name = re.search(r'<summary><b><font size="4">(.*?)</font></b></summary>', line).group(1)
@@ -102,7 +118,7 @@ def plot_ok(conf_name, years, submission_numbers, accepted_numbers, acceptance_r
         ax2.text(i, rate + 0.5, f'{rate}%', color='tab:red', ha='center')
 
     # Add title and legend
-    plt.title(conf_name+'Submission Numbers, Accepted Papers, and Acceptance Rates Over the Years')
+    plt.title(conf_name+' Submission Numbers, Accepted Papers, and Acceptance Rates Over the Years')
     fig.tight_layout()
 
     # Add legends
@@ -111,18 +127,19 @@ def plot_ok(conf_name, years, submission_numbers, accepted_numbers, acceptance_r
 
 
     # Save the plot
-    plt.savefig("graphs/singles/"+conf_name.lower().rstrip()+".png")
+    plt.savefig("graphs/singles/"+conf_name.lower().rstrip()+".png", dpi=300)
+    plt.close()
 
 # Plot the combined data
 def plot_combined_data(combined_df):
     sns.set_theme()
 
     # Create figure and axes
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 6))
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 9))
 
     # Plot acceptance rates as line chart
     sns.lineplot(x='Year', y='Value', hue='Color', data=combined_df[combined_df['Type'] == 'Acceptance Rate'],
-                  marker='o', ax=ax1, palette='tab10', legend=False)
+                  marker='o', ax=ax1, palette='tab10', legend=True)
     ax1.set_ylabel('Acceptance Rate (%)', color='tab:red')
     ax1.tick_params(axis='y', labelcolor='tab:red')
     ax1.set_title('Acceptance Rates Over the Years')
@@ -147,7 +164,8 @@ def plot_combined_data(combined_df):
     plt.subplots_adjust(top=0.9, bottom=0.1, left=0.05, right=0.95)
 
     # Save the plot
-    plt.savefig("graphs/combined_plot.png")
+    plt.savefig("graphs/combined_plot.png", dpi=300)
+    plt.close()
 
 # Function to plot data for a macrocategory
 def plot_macrocategory_data(combined_df, macrocategory):
@@ -167,7 +185,7 @@ def plot_macrocategory_data(combined_df, macrocategory):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(18, 6))
 
     # Plot acceptance rates as line chart
-    sns.lineplot(x='Year', y='Value', hue='Color', data=macro_df[macro_df['Type'] == 'Acceptance Rate'], marker='o', ax=ax1, palette='tab10', legend=False)
+    sns.lineplot(x='Year', y='Value', hue='Color', data=macro_df[macro_df['Type'] == 'Acceptance Rate'], marker='o', ax=ax1, palette='tab10', legend=True)
     ax1.set_ylabel('Acceptance Rate (%)', color='tab:red')
     ax1.tick_params(axis='y', labelcolor='tab:red')
     ax1.set_title(f'Acceptance Rates Over the Years')
@@ -195,11 +213,12 @@ def plot_macrocategory_data(combined_df, macrocategory):
     fig.suptitle(macrocategory, fontsize=16)
 
     # Save the plot
-    plt.savefig(f"graphs/multi/{macrocategory}_combined_plot.png")
+    plt.savefig(f"graphs/multi/{macrocategory}_combined_plot.png", dpi=300)
+    plt.close()
 
 
 
-def generate_single_plots():
+def generate_single_plots(lines):
     # Extract all tables
     tables = extract_table_data(lines)
 
@@ -212,13 +231,13 @@ def generate_single_plots():
         submission_numbers = df[df['Type'] == 'Total']['Value'].tolist()
         plot_ok(short_conf_name, years, submission_numbers, accepted_numbers, acceptance_rates)
 
-def generate_all_plots():
+def generate_all_plots(lines,num_categories=10):
     # Extract all tables
     tables = extract_table_data(lines)
 
     # Combine data for all conferences
     combined_data = []
-
+    # Define the number of unique categories
     for (conference_name,short_conf_name), table_data in tables.items():
         df = create_dataframe(table_data)
         df['Conference'] = short_conf_name
@@ -235,13 +254,13 @@ def generate_all_plots():
 
     # Identify the top 10 conferences by the number of submissions
     total_submissions = combined_df[combined_df['Type'] == 'Total']
-    top_conferences = total_submissions.groupby('Conference')['Value'].sum().nlargest(10).index
+    top_conferences = total_submissions.groupby('Conference')['Value'].sum().nlargest(num_categories).index
 
     # Assign colors to conferences
     combined_df['Color'] = combined_df['Conference'].apply(lambda x: x if x in top_conferences else 'Other')
     plot_combined_data(combined_df)
 
-def generate_all_plots_macrocat():
+def generate_all_plots_macrocat(lines):
     # Extract all tables
     tables = extract_table_data(lines)
 
@@ -269,6 +288,10 @@ def generate_all_plots_macrocat():
         plot_macrocategory_data(combined_df, macrocategory)
 
 if __name__ == '__main__':
-    generate_single_plots()
-    generate_all_plots()
-    generate_all_plots_macrocat()
+    # Read the markdown file
+    with open('README.md', 'r') as f:
+        lines = f.readlines()
+
+        generate_single_plots(lines)
+        generate_all_plots(lines)
+        generate_all_plots_macrocat(lines)

@@ -1,8 +1,8 @@
-# Acceptance rates for journal and major AI-related conferences
+# Acceptance rates for Journals and AI Conferences 📊
 
 <img src="graphs/combined_plot.png" alt="">
 
-## Computer Vision and Pattern Recognition
+## Computer Vision and Pattern Recognition 👁️
 
 | Name | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
 | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
@@ -14,6 +14,8 @@
 | **TIP** | IEEE Transactions on Image Processing | Journal | 138 |  | 474 | 18% |
 | **PATREC** | Elsevier Pattern Recognition | Journal | 111 |  | 289 | 25% |
 | **PATRECL** | Elsevier Pattern Recognition Letters | Journal | 80 |  | 212 | 33% |
+| **SIGGRAPH** | Special Interest Group on GRAPHics and Interactive Techniques | Conference | 156 | 40 | 60 | 27% |
+| **ACMMM** | ACM Multimedia | Conference | 101 | 60 | 90 | 27.7% |
 
 <img src="graphs/multi/Computer Vision and Pattern Recognition_combined_plot.png" alt="">
 
@@ -23,7 +25,7 @@
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **CVPR** | 29.9% (540/1807) | 28.3% (602/2123) | 29.9% (643/2145) | 29.9% (783/2620) | 29.6% (979/3303) | 25.0% (1294/5160) | 22.1% (1470/6656) | 23.7% (1663/7015) | 25.3% (2067/8161) | 25.8% (2360/9155) | 23.6% (2719/11532)
+| **CVPR** | 29.9% (540/1807) | 28.3% (602/2123) | 29.9% (643/2145) | 29.9% (783/2620) | 29.6% (979/3303) | 25.0% (1294/5160) | 22.1% (1470/6656) | 23.7% (1663/7015) | 25.3% (2067/8161) | 25.8% (2360/9155) | 23.6% (2719/11532) |
 
 <img src="graphs/singles/cvpr.png" alt="">
 
@@ -51,8 +53,42 @@
 
 </details>
 
+<details>
+  <summary><b><font size="4">ACMMM - ACM MULTIMEDIA</font></b></summary>
 
-## Artificial Intelligence
+| Year  | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 |
+| :---  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ACMMM** | 22.2% (56/252) | 21.9% (52/237) | 27.6% (189/684) | 27.6% (209/757) | 26.9% (252/936) | 27.9% (474/1698) | 27.9% (542/1942) | 27.7% (690/2491) |
+
+<img src="graphs/singles/acmmm.png" alt="">
+
+</details>
+
+<details>
+  <summary><b><font size="4">WACV - Winter Conference on Applications of Computer Vision</font></b></summary>
+
+| Year  | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+| :---  | :---: | :---: | :---: | :---: | :---: | :---: |
+| **WACV** | - (0/1096) | - (-/-) | 34.64% (406/1172) | 40.65% (641/1577) | 41.41% (846/2043) | - (-/-) |
+
+<img src="graphs/singles/wacv.png" alt="">
+
+
+<details>
+  <summary><b><font size="4">SIGGRAPH - Special Interest Group on GRAPHics and Interactive Techniques</font></b></summary>
+
+| Year  | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+| :---  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **SIGGRAPH** | 25.15% (127/505) | 25.54% (118/462) | 25.48% (119/467) | 28.70% (126/439) | 27.59% (128/464) | 28.83% (111/385) | 27.77% (123/443) | 33.56% (149/444) | 31.80% (194/610) | 34.70% (212/611) | 29.86% (252/844) | - (-/-) |
+
+<img src="graphs/singles/siggraph.png" alt="">
+
+</details>
+
+
+</details>
+
+## Artificial Intelligence 🤖
 | **Name** | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
 | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
 | **ICML** | International Conference on Machine Learning | Conference | 268 | 46 | 88 | 28% |
@@ -75,9 +111,9 @@
 <details>
   <summary><b><font size="4">ICML - International Conference on Machine Learning</font></b></summary>
 
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **ICML** | 15.0% (Cycle I), 22.0% (Cycle II) | 26.0% (270/1037) | 24.0% (322/?) | 25.9% (434/1676) | 25.1% (621/2473) | 22.6% (773/3424) | 21.8% (1088/4990) | 21.5% (1184/5513) | 21.9% (1235/5630) | 27.9% (1827/6538) | 27.5% (2610/9473) |
+| Year | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ICML** | 26.0% (270/1037) | 24.0% (322/1342) | 25.9% (434/1676) | 25.1% (621/2473) | 22.6% (773/3424) | 21.8% (1088/4990) | 21.5% (1184/5513) | 21.9% (1235/5630) | 27.9% (1827/6538) | 30.5% (2944/9653) |
 
 <img src="graphs/singles/icml.png" alt="">
 
@@ -88,7 +124,7 @@
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **NeurIPS** | 24.7% (414/1678) | 21.9% (403/1838) | 23.6% (569/2403) | 20.9% (678/3240) | 20.8% (1011/4856) | 21.1% (1428/6743) | 20.1% (1900/9454) | 25.7% (2344/9122) | 25.6% (?/10411) | 26.1% (3218/12343) | 25.8% (4037/15671) |
+| **NeurIPS** | 24.7% (414/1678) | 21.9% (403/1838) | 23.6% (569/2403) | 20.9% (678/3240) | 20.8% (1011/4856) | 21.1% (1428/6743) | 20.1% (1900/9454) | 25.7% (2344/9122) | 25.6% (2671/10411) | 26.1% (3218/12343) | 25.8% (4037/15671) |
 
 <img src="graphs/singles/neurips.png" alt="">
 
@@ -164,16 +200,16 @@
 <details>
   <summary><b><font size="4">IJCNN - International Joint Conference on Neural Networks</font></b></summary>
 
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **IJCNN** | 64.5% (619/959) | 65.9% (550/834) | 65.1% (730/1123) | 66.6% (621/933) | 65.6% (764/1163) | 61.3% (966/1577) | 57.1% (1134/1990) | 59.3% (1183/2032) | 55.4% (1467/2646) | 54.7% (1034/1888) | 51.9% (1701/3272) |
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **IJCNN** | 64.5% (619/959) | 65.9% (550/834) | 65.1% (730/1123) | 66.6% (621/933) | 65.6% (764/1163) | 61.3% (966/1577) | 57.1% (1134/1990) | 59.3% (1183/2032) | 55.4% (1467/2646) | 54.7% (1034/1888) | 51.9% (1701/3272) | 40.5% (2320/5800) |
 
 <img src="graphs/singles/ijcnn.png" alt="">
 
 </details>
 
 
-## Speech and Audio Signal Processing
+## Speech and Audio Signal Processing 🎤🎶  
 
 | **Name** | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
 | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
@@ -186,6 +222,7 @@
 | **SPL** | IEEE Signal Processing Letters | Journal | 63 | 21 | 46 | 22% |
 | **ISMIR** | International Society for Music Information Retrieval | Conference | 43 | 70 | 70 | 50% |
 | **DAFx** | Digital Audio Effects | Conference | | 50 | 50 | |
+| **ISCAS** | IEEE International Symposium on Circuits and Systems | Conference | 41 | 98 | 98 | 53% |
 
 <img src="graphs/multi/Speech and Audio Signal Processing_combined_plot.png" alt="">
 
@@ -194,7 +231,7 @@
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **INTERSPEECH** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) |
+| **INTERSPEECH** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | 47.7% (1021/2140) | 48.4% (963/1990) |
 
 <img src="graphs/singles/interspeech.png" alt="">
 
@@ -203,16 +240,26 @@
 <details>
   <summary><b><font size="4">ICASSP - International Conference on Acoustics, Speech, and Signal Processing</font></b></summary>
 
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2021 | 2022 | 2023 | 2024 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **ICASSP** | 48.0% (1709/3500) | 52.0% (1207/2322) | 47.0% (1265/2682) | 52.0% (1220/2518) | 49.7% (1406/2829) | 46.5% (1774/3815) | 48.0% (1734/3610) | 45.0% (1785/3967) | 45.1% (2765/6127) | 45.0% (2812/5796) |
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2021 | 2022 | 2023 | 2024 | 2025 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ICASSP** | 48.0% (1709/3500) | 52.0% (1207/2322) | 47.0% (1265/2682) | 52.0% (1220/2518) | 49.7% (1406/2829) | 46.5% (1774/3815) | 48.0% (1734/3610) | 45.0% (1785/3967) | 45.1% (2765/6127) | 45.0% (2812/5796) | 41.0% (3000/7300) |
 
 <img src="graphs/singles/icassp.png" alt="">
 
 </details>
 
+<details>
+  <summary><b><font size="4">EUSIPCO - European Conference on Signal Processing</font></b></summary>
 
-## Natural Language Processing and Computational Linguistics
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **EUSIPCO** | - | 66.7% (601/900) | - | - | 62.9% (547/869) | 62.2% (509/821) | 60.2% (499/829) | - | - | 57.4% (406/707) | 55.4% (552/996) |
+
+<img src="graphs/singles/eusipco.png" alt="">
+
+</details>
+
+## Natural Language Processing and Computational Linguistics 🗣️
 
 | **Name** | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
 | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
@@ -230,7 +277,7 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **ACL** | 26.2% (146/572) | 25.0% (173/692) | 28.0% (231/825) | 25.0% (195/751) | 25.3% (256/1018) | 25.7% (447/1737) | 25.4% (571/2244) | 24.5% (571/2327) | 20.8% (604/3378) | 23.5% (910/3872) |
-| **ACL Findings** | - | - | - | - | - | - | - | 14.6% (339/2327) | 31.4% (~361/3378) | 18.4% (712/3872) |
+| **ACL Findings** | - | - | - | - | - | - | - | 14.6% (339/2327) | 31.4% (361/3378) | 18.4% (712/3872) |
 
 <img src="graphs/singles/acl.png" alt="">
 
@@ -261,7 +308,7 @@
 
 | Year | 2012 | 2014 | 2016 | 2018 | 2020 | 2022 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **COLING** | ~25.0% (195/~780) | 31.7% (217/685) | 32.4% (337/1039) | 37.3% (331/888) | 33.4% (622/1862) | 33.4% (522/1563) |
+| **COLING** | 25.0% (195/780) | 31.7% (217/685) | 32.4% (337/1039) | 37.3% (331/888) | 33.4% (622/1862) | 33.4% (522/1563) |
 | **COLING - Short** | - | - | - | - | - | 24.2% (112/463) |
 <img src="graphs/singles/col.png" alt="">
 
@@ -278,7 +325,7 @@
 </details>
 
 
-## Data Mining and Information Retrieval
+## Data Mining and Information Retrieval 💻
 | **Name** | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
 | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
 | **KDD** | Knowledge Discovery and Data Mining | Conference | 124 | | | 17.3% |
@@ -287,6 +334,7 @@
 | **CIKM** | Conference on Information and Knowledge Management | Conference | 91 | | | 21.4% (Long), 24.1% (Short) |
 | **ICDM** | International Conference on Data Mining | Conference | 50 | | | 9.3% (Long), 10.1% (Short) |
 | **RecSys** | Recommender Systems | Conference | 53 | | | 19.4% (Long), 16.4% (Short) |
+| **TII** | IEEE Transactions on Industrial Informatics | Journal | 170 | 170 | 338 | 18% |
 
 <img src="graphs/multi/Data Mining and Information Retrieval_combined_plot.png" alt="">
 
@@ -328,10 +376,10 @@
 <details>
   <summary><b><font size="4">CIKM - Conference on Information and Knowledge Management</font></b></summary>
 
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **CIKM Long** | 21.0% (175/838) | 26.0% (165/646) | 23.0% (160/701) | 20.0% (171/855) | 17.0% (147/862) | 19.4% (200/1030) | 21.0% (193/920) | 21.7% (271/1251) | ?% (272/?) |
-| **CIKM Short** | 21.9% (57/260) | 25.0% (69/276) | 23.5% (55/234) | 28.4% (119/419) | 23.2% (96/413) | 21.3% (100/470) | 25.9% (103/397) | 28.3% (177/626) | ?% (196/?) |
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: 
+| **CIKM Long** | 21.0% (175/838) | 26.0% (165/646) | 23.0% (160/701) | 20.0% (171/855) | 17.0% (147/862) | 19.4% (200/1030) | 21.0% (193/920) | 21.7% (271/1251) |
+| **CIKM Short** | 21.9% (57/260) | 25.0% (69/276) | 23.5% (55/234) | 28.4% (119/419) | 23.2% (96/413) | 21.3% (100/470) | 25.9% (103/397) | 28.3% (177/626) |
 
 <img src="graphs/singles/cikm.png" alt="">
 
@@ -361,18 +409,15 @@
 
 </details>
 
-## Others
+## Radiology and Medical Imaging 🧬
 
 | Name | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
 | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- | :------------- |
-| **IEEE ACCESS** | IEEE Access | Journal | 233 | 28 | 42 | 30% |
-| **TII** | IEEE Transactions on Industrial Informatics | Journal | 170 | 170 | 338 | 18% |
-| **SIGGRAPH** | Special Interest Group on GRAPHics and Interactive Techniques | Conference | 156 | 40 | 60 | 27% |
 | **MICCAI** | International Conference on Medical Image Computing and Computer-Assisted Intervention | Conference | 89 | 67 | 102 | 30% |
-| **ISCAS** | IEEE International Symposium on Circuits and Systems | Conference | 41 | 98 | 98 | 53% |
-| **ACM MM** | ACM Multimedia | Conference | 101 | 60 | 90 | 27.7% |
+| **TMI** | IEEE Transactions on Medical Imaging | Journal | 125 | - | - | - |
 
-## How to add a new conference/journal data
+
+## How to add contribute in adding new conference/journal data
 ### If you want to add a journal or conference (without data for every year) to the list, you can follow the steps below:
 1. Find the appropriate category
 2. Add a line like below, if you do not have all the information just leave it blank but with the same spacing.
@@ -390,7 +435,7 @@
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Short_conf_name** | - | 51.0% (~743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) |
+| **Short_conf_name** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | 47% (?/?) | 48.4% (963/1990) |
 
 <img src="graphs/singles/interspeech.png" alt="">
 
@@ -407,7 +452,7 @@
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Short_conf_name** | - | 51.0% (~743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) |
+| **Short_conf_name** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | 47% (?/?) | 48.4% (963/1990) |
 
 <img src="graphs/singles/interspeech.png" alt="">
 
@@ -432,7 +477,7 @@ and the data after the previous year data:
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Short_conf_name** | - | 51.0% (~743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | ~47% (?/?) | 48.4% (963/1990) | 58.4% (963/1990) |
+| **Short_conf_name** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | 47% (?/?) | 48.4% (963/1990) | 58.4% (963/1990) |
 
 <img src="graphs/singles/interspeech.png" alt="">
 
