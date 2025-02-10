@@ -26,8 +26,7 @@
 | Year       | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 |-----------|------|------|------|------|------|------|------|------|------|------|------|
 | **Accept. Rate**  | 29.9% (540/1807) | 28.3% (602/2123) | 29.9% (643/2145) | 29.9% (783/2620) | 29.6% (979/3303) | 25.0% (1294/5160) | 22.1% (1470/6656) | 23.7% (1663/7015) | 25.3% (2067/8161) | 25.8% (2360/9155) | 23.6% (2719/11532) |
-| **Location** | - | Boston, MA, USA | Las Vegas, NV, USA | Honolulu, HI, USA | Salt Lake City, UT, USA | Long Beach, CA, USA | Virtual | Virtual | New Orleans, LA, USA | Vancouver, BC, Canada | Seattle, WA, USA |
-
+| **Location** | - | Boston, USA | Las Vegas, USA | Honolulu, USA | Salt Lake City, USA | Long Beach, USA | Virtual, Event | Virtual, Event | New Orleans, USA | Vancouver, Canada | Seattle, USA |
 <img src="graphs/singles/cvpr.png" alt="">
 
 </details>
@@ -37,7 +36,7 @@
 | Year | 2013 | 2015 | 2017 | 2019 | 2021 | 2023 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 27.9% (454/1629) | 30.9% (525/1698) | 29.0% (621/2143) | 25.0% (1077/4304) | 26.2% (1612/6152) | 26.8% (2162/8068) |
-| **Location** | Sydney, Australia | Santiago, Chile | Venice, Italy | Seoul, South Korea | Virtual (Montreal, Canada) | Paris, France |
+| **Location** | Sydney, Australia | Santiago, Chile | Venice, Italy | Seoul, South Korea | Virtual, Event | Paris, France |
 
 <img src="graphs/singles/iccv.png" alt="">
 
@@ -49,7 +48,7 @@
 | Year | 2014 | 2016 | 2018 | 2020 | 2022 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 27.9% (363/1444) | 26.6% (415/1561) | 31.8% (776/2439) | 27.1% (1361/5025) | 19.9% (1629/8170) | 27.9% (2395/8585) |
-| **Location** | Zürich, Switzerland | Amsterdam, Netherlands | Munich, Germany | Virtual (Glasgow, UK) | Tel Aviv, Israel | Milan, Italy |
+| **Location** | Zürich, Switzerland | Amsterdam, Netherlands | Munich, Germany | Virtual, Event | Tel Aviv, Israel | Milan, Italy |
 
 <img src="graphs/singles/eccv.png" alt="">
 
@@ -58,10 +57,10 @@
 <details>
   <summary><b><font size="4">ACMMM - ACM MULTIMEDIA</font></b></summary>
 
-| Year  | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
-| :---  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Accept. Rate** | 22.2% (56/252) | 21.9% (52/237) | 27.6% (189/684) | 27.6% (209/757) | 26.9% (252/936) | 27.9% (474/1698) | 27.9% (542/1942) | 27.7% (690/2491) | Ottawa, Canada |
-| **Location** | Orlando, USA | Amsterdam, Netherlands | Mountain View, USA | Seoul, South Korea | Nice, France | Virtual | Virtual | Lisbon, Portugal | Ottawa, Canada |
+| Year  | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 |
+| :---  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Accept. Rate** | 22.2% (56/252) | 21.9% (52/237) | 27.6% (189/684) | 27.6% (209/757) | 26.9% (252/936) | 27.9% (474/1698) | 27.9% (542/1942) | 27.7% (690/2491) |
+| **Location** | Orlando, USA | Amsterdam, Netherlands | Mountain View, USA | Seoul, South Korea | Nice, France | Virtual, Event | Virtual, Event | Lisbon, Portugal |
 
 <img src="graphs/singles/acmmm.png" alt="">
 
@@ -70,10 +69,10 @@
 <details>
   <summary><b><font size="4">WACV - Winter Conference on Applications of Computer Vision</font></b></summary>
 
-| Year  | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
-| :---  | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Accept. Rate** | - (0/1096) | - (-/-) | 34.64% (406/1172) | 40.65% (641/1577) | 41.41% (846/2043) | Waikoloa, Hawaii, USA |
-| **Location** | Snowmass Village, Colorado, USA | Snowmass Village, Colorado, USA | Lake Tahoe, California, USA | Waikoloa, Hawaii, USA | Waikoloa, Hawaii, USA | Waikoloa, Hawaii, USA |
+| Year  | 2020 | 2021 | 2022 | 2023 | 2024 |
+| :---  | :---: | :---: | :---: | :---: | :---: |
+| **WACV** | - (0/1096) | - (-/-) | 34.64% (406/1172) | 40.65% (641/1577) | 41.41% (846/2043) |
+| **Location** | Snowmass Village, USA | Snowmass Village, USA | Lake Tahoe, USA | Waikoloa, USA | Waikoloa, USA |
 
 <img src="graphs/singles/wacv.png" alt="">
 
@@ -85,7 +84,7 @@
 | Year  | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :---  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 25.15% (127/505) | 25.54% (118/462) | 25.48% (119/467) | 28.70% (126/439) | 27.59% (128/464) | 28.83% (111/385) | 27.77% (123/443) | 33.56% (149/444) | 31.80% (194/610) | 34.70% (212/611) | 29.86% (252/844) | - (-/-) |
-| **Location** | Anaheim, USA | Los Angeles, USA | Anaheim, USA | Los Angeles, USA | Vancouver, Canada | Los Angeles, USA | Virtual | Virtual | Vancouver, Canada | Los Angeles, USA | Denver, Colorado, USA | Vancouver, Canada |
+| **Location** | Anaheim, USA | Los Angeles, USA | Anaheim, USA | Los Angeles, USA | Vancouver, Canada | Los Angeles, USA | Virtual, Event | Virtual, Event | Vancouver, Canada | Los Angeles, USA | Denver, Colorado, USA | Vancouver, Canada |
 
 <img src="graphs/singles/siggraph.png" alt="">
 
@@ -119,7 +118,7 @@
 | Year | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 26.0% (270/1037) | 24.0% (322/1342) | 25.9% (434/1676) | 25.1% (621/2473) | 22.6% (773/3424) | 21.8% (1088/4990) | 21.5% (1184/5513) | 21.9% (1235/5630) | 27.9% (1827/6538) | 30.5% (2944/9653) |
-| **Location** | Lille, France | New York City, USA | Sydney, Australia | Stockholm, Sweden | Long Beach, USA | Virtual | Virtual | Virtual | Honolulu, USA | Singapore |
+| **Location** | Lille, France | New York City, USA | Sydney, Australia | Stockholm, Sweden | Long Beach, USA | Virtual, Event | Virtual, Event | Virtual, Event | Honolulu, USA | Singapore |
 
 <img src="graphs/singles/icml.png" alt="">
 
@@ -131,7 +130,7 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 24.7% (414/1678) | 21.9% (403/1838) | 23.6% (569/2403) | 20.9% (678/3240) | 20.8% (1011/4856) | 21.1% (1428/6743) | 20.1% (1900/9454) | 25.7% (2344/9122) | 25.6% (2671/10411) | 26.1% (3218/12343) | 25.8% (4037/15671) |
-| **Location** | Montreal, Canada | Montreal, Canada | Barcelona, Spain | Long Beach, USA | Montreal, Canada | Vancouver, Canada | Virtual | Virtual | Virtual | New Orleans, USA |
+| **Location** | Montreal, Canada | Montreal, Canada | Barcelona, Spain | Long Beach, USA | Montreal, Canada | Vancouver, Canada | Virtual, Event | Virtual, Event | Virtual, Event | New Orleans, USA |
 
 <img src="graphs/singles/neurips.png" alt="">
 
@@ -143,21 +142,19 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | - | - | - | 39.1% (198/507) | 32.0% (314/981) | 31.4% (500/1591) | 26.5% (687/2594) | 28.7% (860/2997) | 32.9% (1095/3328) | 32.0% (1574/4956) | 30.81% (2250/7304) | 31.75% (3706/11672) |
-| **Location** | San Juan, Puerto Rico, USA | Toulon, France | San Juan, Puerto Rico, USA | New Orleans, USA | Vancouver, Canada | Addis Ababa, Ethiopia | Virtual | Virtual | Virtual | Kigali, Rwanda | Vienna, Austria |
+| **Location** | San Juan, USA | Toulon, France | San Juan, USA | New Orleans, USA | Vancouver, Canada | Addis Ababa, Ethiopia | Virtual, Event | Virtual, Event | Virtual, Event | Kigali, Rwanda | Vienna, Austria |
 
 <img src="graphs/singles/iclr.png" alt="">
 
 </details>
-
-Grazie per la correzione! Ecco la tabella aggiornata con le location corrette di AISTATS:
 
 <details>
   <summary><b><font size="4">AISTATS - International Conference on Artificial Intelligence and Statistics</font></b></summary>
 
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Accept. Rate** | 35.8% (120/335) | 28.7% (127/442) | 30.7% (165/537) | 31.7% (168/530) | 33.2% (214/645) | 32.4% (360/1111) | - | 29.8% (455/1527) | 29.2% (493/1685) | 29.4% (496/1686) | 27.6% (546/1980) |
-| **Location** | Reykjavik, Iceland | San Diego, California, USA | Cadiz, Spain | Fort Lauderdale, Florida, USA | Playa Blanca, Lanzarote, Canary Islands, Spain | Naha, Okinawa, Japan | Virtual Meeting | Virtual Conference | Virtual Conference | Valencia, Spain | Valencia, Spain | Mai Khao, Thailand |
+| **Accept. Rate** | 35.8% (120/335) | 28.7% (127/442) | 30.7% (165/537) | 31.7% (168/530) | 33.2% (214/645) | 32.4% (360/1111) | - | 29.8% (455/1527) | 29.2% (493/1685) | 29.4% (496/1686) | 27.6% (546/1980) | - |
+| **Location** | Reykjavik, Iceland | San Diego, USA | Cadiz, Spain | Fort Lauderdale, USA | Playa Blanca, Lanzarote, Canary Islands, Spain | Naha, Okinawa, Japan | Virtual, Event Meeting | Virtual, Event Conference | Virtual, Event Conference | Valencia, Spain | Valencia, Spain | Mai Khao, Thailand |
 
 <img src="graphs/singles/aistats.png" alt="">
 
@@ -170,7 +167,7 @@ Grazie per la correzione! Ecco la tabella aggiornata con le location corrette di
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate**| 28.0% (398/1406) | 26.7% (531/1991) | 25.8% (549/2132) | 24.6% (638/2590) | 24.6% (933/3800) | 16.2% (1150/7095) | 20.6% (1591/7737) | 21.4% (1692/7911) | 15.0% (1349/9020) | 19.6% (1721/8777) | 23.75% (2342/9862) | 23.40% (3032/12957) |
-| **Location** | Phoenix, USA | San Francisco, USA | New Orleans, USA | Honolulu, USA | New York City, USA | Virtual | Virtual | Virtual | Virtual | Washington, D.C., USA |
+| **Location** | Phoenix, USA | San Francisco, USA | New Orleans, USA | Honolulu, USA | New York City, USA | Virtual, Event | Virtual, Event | Virtual, Event | Virtual, Event | Washington D.C., USA |
 
 <img src="graphs/singles/aaai.png" alt="">
 
@@ -182,7 +179,7 @@ Grazie per la correzione! Ecco la tabella aggiornata con le location corrette di
 | Year | 2013 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 28.0% (413/1473) | 28.6% (572/1996) | 24.0% (551/2294) | 26.0% (660/2540) | 20.5% (710/3470) | 17.9% (850/4752) | 12.6% (592/4717) | 13.9% (587/4204) | 14.9% (679/4535) | 14.1% (643/4566) |
-| **Location** | Beijing, China | Buenos Aires, Argentina | New York City, USA | Melbourne, Australia | Stockholm, Sweden | Macao, China | Virtual | Virtual | Virtual | Cape Town, South Africa |
+| **Location** | Beijing, China | Buenos Aires, Argentina | New York City, USA | Melbourne, Australia | Stockholm, Sweden | Macao, China | Virtual, Event | Virtual, Event | Virtual, Event | Cape Town, South Africa |
 
 <img src="graphs/singles/ijcai.png" alt="">
 
@@ -241,7 +238,6 @@ Grazie per la correzione! Ecco la tabella aggiornata con le location corrette di
 
 <img src="graphs/multi/Speech and Audio Signal Processing_combined_plot.png" alt="">
 
-Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **ICASSP**, ed **EUSIPCO**:
 
 <details>
   <summary><b><font size="4">ICASSP - International Conference on Acoustics, Speech, and Signal Processing</font></b></summary>
@@ -258,11 +254,10 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
 <details>
   <summary><b><font size="4">INTERSPEECH - Conference on Speech and Signal Processing</font></b></summary>
 
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | 47.7% (1021/2140) | 48.4% (963/1990) |
-| **Location** | Singapore | Dresden, Germany | San Francisco, USA | Stockholm, Sweden | Hyderabad, India | Graz, Austria | Virtual | Virtual | Virtual | Dublin, Ireland | Kos, Greece |
-
+| **Location** | Singapore | Dresden, Germany | San Francisco, USA | Stockholm, Sweden | Hyderabad, India | Graz, Austria | Virtual, Event | Virtual, Event |
 
 <img src="graphs/singles/interspeech.png" alt="">
 
@@ -274,7 +269,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | - | 66.7% (601/900) | - | - | 62.9% (547/869) | 62.2% (509/821) | 60.2% (499/829) | - | - | 57.4% (406/707) | 55.4% (552/996) |
-| **Location** | Lisbon, Portugal | Nice, France | Budapest, Hungary | Kos, Greece | Rome, Italy | Athens, Greece | Virtual | Virtual | Virtual | Helsinki, Finland | Lyon, France |
+| **Location** | Lisbon, Portugal | Nice, France | Budapest, Hungary | Kos, Greece | Rome, Italy | Athens, Greece | Virtual, Event | Virtual, Event | Virtual, Event | Helsinki, Finland | Lyon, France |
 
 <img src="graphs/singles/eusipco.png" alt="">
 
@@ -299,7 +294,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 26.2% (146/572) | 25.0% (173/692) | 28.0% (231/825) | 25.0% (195/751) | 25.3% (256/1018) | 25.7% (447/1737) | 25.4% (571/2244) | 24.5% (571/2327) | 20.8% (604/3378) | 23.5% (910/3872) |
 | **Accept. Rate Findings** | - | - | - | - | - | - | - | 14.6% (339/2327) | 31.4% (361/3378) | 18.4% (712/3872) |
-| **Location** | **Baltimore, USA** | **Beijing, China** | **Berlin, Germany** | **Vancouver, Canada** | **New Orleans, USA** | **Florence, Italy** | **Seattle, USA** | **Virtual** | **Dublin, Ireland** | **Toronto, Canada** |
+| **Location** | Baltimore, USA | Beijing, China | Berlin, Germany | Vancouver, Canada | New Orleans, USA | Florence, Italy | Seattle, USA | Virtual, Event | Dublin, Ireland | Toronto, Canada |
 
 <img src="graphs/singles/acl.png" alt="">
 
@@ -312,7 +307,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 30.4% (155/510) | 26.2% (157/600) | 25.8% (177/687) | 25.8% (216/836) | 25.5% (351/1376) | 25.6% (465/1813) | 24.5% (602/2455) | 25.6% (650/2540) | 22.1% (715/3242) | 23.3% (901/3868) |
 | **Accept. Rate Findings** | - | - | - | - | - | - | 13.5% (332/2455) | 11.8% (300/2540) | 14.0% (453/3242) | 22.9% (886/3868) |
-| **Location** | **Doha, Qatar** | **Lisbon, Portugal** | **Austin, USA** | **Copenhagen, Denmark** | **Brussels, Belgium** | **Hong Kong** | **Online** | **Virtual** | **Abu Dhabi, UAE** | **Singapore** |
+| **Location** | Doha, Qatar | Lisbon, Portugal | Austin, USA | Copenhagen, Denmark | Brussels, Belgium | Hong Kong | Online | Virtual, Event | Abu Dhabi, UAE | Singapore |
 
 <img src="graphs/singles/emnlp.png" alt="">
 
@@ -325,7 +320,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | ****Accept. Rate - Long** | 30.4% (89/293) | 29.1% (117/402) | 25.3% (100/396) | 31.7% (205/647) | 26.3% (281/1067) | 27.9% (350/1254) | 17.0% (358/2103) |
 | **Accept. Rate - Short** | 31.5% (51/162) | 22.1% (69/312) | 28.9% (82/284) | 29.4% (125/425) | 21.3% (142/666) | 23.3% (127/544) | 4.0% (84/2103) |
-| **Location** | **Atlanta, USA** | **Denver, USA** | **San Diego, USA** | **New Orleans, USA** | **Minneapolis, USA** | **Online** | **Seattle, USA** |
+| **Location** | Atlanta, USA | Denver, USA | San Diego, USA | New Orleans, USA | Minneapolis, USA | Online | Seattle, USA |
 
 <img src="graphs/singles/naacl.png" alt="">
 
@@ -338,8 +333,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 25.0% (195/780) | 31.7% (217/685) | 32.4% (337/1039) | 37.3% (331/888) | 33.4% (622/1862) | 33.4% (522/1563) |
 | **Accept. Rate - Short** | - | - | - | - | - | 24.2% (112/463) |
-| **Location** | **Mumbai, India** | **Dublin, Ireland** | **Osaka, Japan** | **Santa Fe, USA** | **Virtual** | **Gothenburg, Sweden** |
-
+| **Location** | Mumbai, India | Dublin, Ireland | Osaka, Japan | Santa Fe, USA | Virtual, Event | Gothenburg, Sweden |
 <img src="graphs/singles/col.png" alt="">
 
 </details>
@@ -350,7 +344,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 |**Accept. Rate** | 24.1% (20/83) | 29.9% (38/127) | 20.1% (30/149) | 18.5% (50/271) | 20.8% (57/274) | 22.0% (97/441) | 23.3% (53/227) |
-| **Location** | **Sochi, Russia** | **Denver, USA** | **Seattle, USA** | **Vancouver, Canada** | **Strasbourg, France** | **Hong Kong** | **Online** |
+| **Location** | Sochi, Russia | Denver, USA | Seattle, USA | Vancouver, Canada | Strasbourg, France | Hong Kong | Online |
 
 <img src="graphs/singles/conll.png" alt="">
 
@@ -376,7 +370,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
   | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2022 | 2023 |
   | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
   | **Accept. Rate** | 14.6% (151/1036) | 19.5% (160/819) | 13.7% (142/1115) | 17.4% (130/748) | 18.4% (181/983) | 14.2% (170/1200) | 16.9% (216/1279) | 15.0% (254/1695) | 22.1% (313/1416) |
-  | **Location** | New York, USA | Sydney, Australia | San Francisco, USA | Halifax, Canada | London, UK | Anchorage, USA | San Diego, USA | Washington, D.C., USA | Long Beach, USA |
+  | **Location** | New York, USA | Sydney, Australia | San Francisco, USA | Halifax, Canada | London, UK | Anchorage, USA | San Diego, USA | Washington D.C., USA | Long Beach, USA |
 
   <img src="graphs/singles/kdd.png" alt="">
 
@@ -440,7 +434,7 @@ Ecco la tabella aggiornata con le location per le conferenze **Interspeech**, **
   | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
   | **Accept. Rate Long** | 23.0% (35/152) | 18.2% (29/159) | 20.8% (26/125) | 17.7% (32/181) | 19.0% (36/189) | 17.9% (39/218) |
   | **Accept. Rate Short** | - | - | 16.4% (20/122) | - | - | - |
-  | **Location** | Madrid, Spain | Boston, USA | Como, Italy | Vancouver, Canada | Copenhagen, Denmark | Virtual Event |
+  | **Location** | Madrid, Spain | Boston, USA | Como, Italy | Vancouver, Canada | Copenhagen, Denmark | Virtual, Event |
 
   <img src="graphs/singles/recsys.png" alt="">
 
