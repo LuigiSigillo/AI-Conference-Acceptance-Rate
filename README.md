@@ -118,7 +118,7 @@
 | Year | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 26.0% (270/1037) | 24.0% (322/1342) | 25.9% (434/1676) | 25.1% (621/2473) | 22.6% (773/3424) | 21.8% (1088/4990) | 21.5% (1184/5513) | 21.9% (1235/5630) | 27.9% (1827/6538) | 30.5% (2944/9653) |
-| **Location** | Lille, France | New York City, USA | Sydney, Australia | Stockholm, Sweden | Long Beach, USA | Virtual, Event | Virtual, Event | Virtual, Event | Honolulu, USA | Singapore |
+| **Location** | Lille, France | New York City, USA | Sydney, Australia | Stockholm, Sweden | Long Beach, USA | Virtual, Event | Virtual, Event | Virtual, Event | Honolulu, USA | Singapore, Singapore |
 
 <img src="graphs/singles/icml.png" alt="">
 
@@ -130,7 +130,7 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 24.7% (414/1678) | 21.9% (403/1838) | 23.6% (569/2403) | 20.9% (678/3240) | 20.8% (1011/4856) | 21.1% (1428/6743) | 20.1% (1900/9454) | 25.7% (2344/9122) | 25.6% (2671/10411) | 26.1% (3218/12343) | 25.8% (4037/15671) |
-| **Location** | Montreal, Canada | Montreal, Canada | Barcelona, Spain | Long Beach, USA | Montreal, Canada | Vancouver, Canada | Virtual, Event | Virtual, Event | Virtual, Event | New Orleans, USA |
+| **Location** | Montreal, Canada | Montreal, Canada | Barcelona, Spain | Long Beach, USA | Montreal, Canada | Vancouver, Canada | Virtual, Event | Virtual, Event | Virtual, Event | New Orleans, USA | Vancouver, Canada |
 
 <img src="graphs/singles/neurips.png" alt="">
 
@@ -142,7 +142,7 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | - | - | - | 39.1% (198/507) | 32.0% (314/981) | 31.4% (500/1591) | 26.5% (687/2594) | 28.7% (860/2997) | 32.9% (1095/3328) | 32.0% (1574/4956) | 30.81% (2250/7304) | 31.75% (3706/11672) |
-| **Location** | San Juan, USA | Toulon, France | San Juan, USA | New Orleans, USA | Vancouver, Canada | Addis Ababa, Ethiopia | Virtual, Event | Virtual, Event | Virtual, Event | Kigali, Rwanda | Vienna, Austria |
+| **Location** | San Juan, USA | Toulon, France | San Juan, USA | New Orleans, USA | Vancouver, Canada | Addis Ababa, Ethiopia | Virtual, Event | Virtual, Event | Virtual, Event | Kigali, Rwanda | Vienna, Austria | Singapore, Singapore |
 
 <img src="graphs/singles/iclr.png" alt="">
 
@@ -167,7 +167,7 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate**| 28.0% (398/1406) | 26.7% (531/1991) | 25.8% (549/2132) | 24.6% (638/2590) | 24.6% (933/3800) | 16.2% (1150/7095) | 20.6% (1591/7737) | 21.4% (1692/7911) | 15.0% (1349/9020) | 19.6% (1721/8777) | 23.75% (2342/9862) | 23.40% (3032/12957) |
-| **Location** | Phoenix, USA | San Francisco, USA | New Orleans, USA | Honolulu, USA | New York City, USA | Virtual, Event | Virtual, Event | Virtual, Event | Virtual, Event | Washington D.C., USA |
+| **Location** | Quebec, Canada | Austin, USA | Phoenix, USA | San Francisco, USA | New Orleans, USA | Honolulu, USA | New York, USA | Virtual, Event | Virtual, Event | Washington D.C., USA | Vancouver, Canada | Philadelphia, USA |
 
 <img src="graphs/singles/aaai.png" alt="">
 
@@ -191,35 +191,11 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 64.5% (619/959) | 65.9% (550/834) | 65.1% (730/1123) | 66.6% (621/933) | 65.6% (764/1163) | 61.3% (966/1577) | 57.1% (1134/1990) | 59.3% (1183/2032) | 55.4% (1467/2646) | 54.7% (1034/1888) | 51.9% (1701/3272) | 40.5% (2320/5800) |
-| **Location** | Beijing, China | Killarney, Ireland | Vancouver, Canada | Anchorage, USA | Rio de Janeiro, Brazil | Budapest, Hungary | Glasgow, Scotland | Padua, Italy | Queensland, Australia | Yokohama, Japan | Rome, Italy |
+| **Location** | Beijing, China | Killarney, Ireland | Vancouver, Canada | Anchorage, USA | Rio de Janeiro, Brazil | Budapest, Hungary | Glasgow, Scotland | Shenzhen, China | Padua, Italy | Queensland, Australia | Yokohama, Japan | Rome, Italy |
 
 <img src="graphs/singles/ijcnn.png" alt="">
 
 </details>
-
-<!-- <details>
-  <summary><b><font size="4">COLT - Conference on Learning Theory</font></b></summary>
-
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **COLT** | 32.1% (45/140) | 34.8% (62/178) | 26.1% (53/203) | 32.5% (74/228) | 27.2% (91/335) | 30.0% (118/393) | 30.9% (120/388) |
-
-<img src="graphs/singles/colt.png" alt="">
-
-</details> -->
-
-<!-- <details>
-  <summary><b><font size="4">UAI - Conference on Uncertainty in Artificial Intelligence</font></b></summary>
-
-| Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **UAI** | 32.0% (94/292) | 34.0% (99/291) | 31.0% (85/275) | 31.0% (87/282) | 30.8% (104/337) | 26.0% (118/450) | 27.5% (142/515) | 26.3% (205/777) | 32.3% (230/712) | 31.2% (243/778) |
-
-<img src="graphs/singles/uai.png" alt="">
-
-</details> -->
-
-
 
 ## Speech and Audio Signal Processing 🎤🎶  
 
@@ -245,7 +221,7 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 48.0% (1709/3500) | 52.0% (1207/2322) | 47.0% (1265/2682) | 52.0% (1220/2518) | 49.7% (1406/2829) | 46.5% (1774/3815) | 48.0% (1734/3610) | 45.0% (1785/3967) | 45.1% (2765/6127) | 45.0% (2812/5796) | 41.0% (3000/7300) |
-| **Location** | Florence, Italy | Brisbane, Australia | Shanghai, China | New Orleans, USA | Calgary, Canada | Brighton, UK | Toronto, Canada | Singapore | Rhodes, Greece | Seoul, South Korea | Hyderabad, India |
+| **Location** | Florence, Italy | Brisbane, Australia | Shanghai, China | New Orleans, USA | Calgary, Canada | Brighton, UK | Toronto, Canada | Singapore, Singapore | Rhodes, Greece | Seoul, South Korea | Hyderabad, India |
 
 <img src="graphs/singles/icassp.png" alt="">
 
@@ -257,7 +233,7 @@
 | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | - | 51.0% (743/1458) | 50.5% (779/1541) | 52.0% (799/1582) | 54.3% (749/1320) | 49.3% (914/1855) | 47.7% (1021/2140) | 48.4% (963/1990) |
-| **Location** | Singapore | Dresden, Germany | San Francisco, USA | Stockholm, Sweden | Hyderabad, India | Graz, Austria | Virtual, Event | Virtual, Event |
+| **Location** | Singapore, Singapore | Dresden, Germany | San Francisco, USA | Stockholm, Sweden | Hyderabad, India | Graz, Austria | Virtual, Event | Virtual, Event |
 
 <img src="graphs/singles/interspeech.png" alt="">
 
@@ -307,7 +283,7 @@
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 30.4% (155/510) | 26.2% (157/600) | 25.8% (177/687) | 25.8% (216/836) | 25.5% (351/1376) | 25.6% (465/1813) | 24.5% (602/2455) | 25.6% (650/2540) | 22.1% (715/3242) | 23.3% (901/3868) |
 | **Accept. Rate Findings** | - | - | - | - | - | - | 13.5% (332/2455) | 11.8% (300/2540) | 14.0% (453/3242) | 22.9% (886/3868) |
-| **Location** | Doha, Qatar | Lisbon, Portugal | Austin, USA | Copenhagen, Denmark | Brussels, Belgium | Hong Kong | Online | Virtual, Event | Abu Dhabi, UAE | Singapore |
+| **Location** | Doha, Qatar | Lisbon, Portugal | Austin, USA | Copenhagen, Denmark | Brussels, Belgium | Hong Kong | Online | Virtual, Event | Abu Dhabi, UAE | Singapore, Singapore |
 
 <img src="graphs/singles/emnlp.png" alt="">
 
@@ -395,7 +371,7 @@
   | Year | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 |
   | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
   | **Accept. Rate**| 18.0% (64/355) | 16.4% (39/238) | 18.2% (67/368) | 15.8% (80/505) | 16.1% (84/514) | 16.4% (84/511) | 14.8% (91/615) | 18.6% (112/603) | 15.8% (80/505) | 17.8% (123/690) |
-  | **Location** | New York, USA | Shanghai, China | San Francisco, USA | Cambridge, UK | Los Angeles, USA | Melbourne, Australia | Houston, USA | Phoenix, USA | Singapore, Singapore | Singapore, Singapore |
+  | **Location** | New York, USA | Shanghai, China | San Francisco, USA | Cambridge, UK | Los Angeles, USA | Melbourne, Australia | Houston, USA | Phoenix, USA | Singapore, Singapore, Singapore, Singapore | Singapore, Singapore, Singapore, Singapore |
 
   <img src="graphs/singles/wsdm.png" alt="">
 
@@ -408,7 +384,7 @@
   | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
   | **Accept. Rate Long** | 21.0% (175/838) | 26.0% (165/646) | 23.0% (160/701) | 20.0% (171/855) | 17.0% (147/862) | 19.4% (200/1030) | 21.0% (193/920) | 21.7% (271/1251) |
   | **Accept. Rate Short** | 21.9% (57/260) | 25.0% (69/276) | 23.5% (55/234) | 28.4% (119/419) | 23.2% (96/413) | 21.3% (100/470) | 25.9% (103/397) | 28.3% (177/626) |
-  | **Location** | Shanghai, China | Melbourne, Australia | Indianapolis, USA | Singapore, Singapore | Turin, Italy | Beijing, China | Galway, Ireland | Gold Coast, Australia |
+  | **Location** | Shanghai, China | Melbourne, Australia | Indianapolis, USA | Singapore, Singapore, Singapore, Singapore | Turin, Italy | Beijing, China | Galway, Ireland | Gold Coast, Australia |
 
   <img src="graphs/singles/cikm.png" alt="">
 

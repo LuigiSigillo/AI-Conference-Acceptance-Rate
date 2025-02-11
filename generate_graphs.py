@@ -3,6 +3,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import io
 import re
+import folium
+from folium.plugins import MarkerCluster
+from geopy.exc import GeocoderTimedOut, GeocoderServiceError
+import time
+from geopy.geocoders import Nominatim
+from tqdm import tqdm
+import random
 import numpy as np
 def remove_emoji(text):
     emoji_pattern = re.compile(
@@ -55,21 +62,48 @@ def extract_values(cell):
         return float(match.group(1)), int(match.group(2)), int(match.group(3))
     print(f"Failed to match: {cell}")
     return None, None, None
+
+def extract_values_location(cell):
+    match = re.match(r'([A-Za-z\s]+),\s*([A-Za-z\s]+)', cell)
+    if match:
+        return match.group(1).strip(), match.group(2).strip()
+    print(f"Failed to match: {cell}")
+    return None, None
+
 # Function to create a DataFrame from table data
 def create_dataframe(table_data):
     df = pd.read_csv(io.StringIO(''.join(table_data)), sep='|', engine='python')
     df.columns = [col.strip() for col in df.columns]
     df = df.dropna(axis=1, how='all').dropna(axis=0, how='all')
-    df = df.iloc[1:2]  # Select only the first row (row index 1)
+    df_y = df.iloc[1:2]  # Select only the first row (row index 1)
     # Create new DataFrame
     new_data = {'Year': [], 'Type': [], 'Value': []}
 
-    for col in df.columns[2:]:
-        percentage, first_num, second_num = extract_values(df[col][1])
+    for col in df_y.columns[2:]:
+        percentage, first_num, second_num = extract_values(df_y[col][1])
         new_data['Year'].extend([col, col, col])
         new_data['Type'].extend(['Acceptance Rate', 'Accepted', 'Total'])
         new_data['Value'].extend([percentage, first_num, second_num])
+
     return pd.DataFrame(new_data)
+
+# Function to create a DataFrame from table data
+def create_dataframe_location(table_data):
+    df = pd.read_csv(io.StringIO(''.join(table_data)), sep='|', engine='python')
+    df.columns = [col.strip() for col in df.columns]
+    df = df.dropna(axis=1, how='all').dropna(axis=0, how='all')
+    df_l = df.iloc[2:3] 
+    # Create new DataFrame
+    new_data = {'Year': [], 'Type': [], 'Location': []}
+
+    for col in df_l.columns[2:]:
+        city, country = extract_values_location(df_l[col][2])
+        new_data['Year'].extend([col, col])
+        new_data['Type'].extend(['City', 'Country'])
+        new_data['Location'].extend([city, country])
+
+    return pd.DataFrame(new_data)
+
 
 # Function to plot data
 def plot_ok(conf_name, years, submission_numbers, accepted_numbers, acceptance_rates):
@@ -217,7 +251,6 @@ def plot_macrocategory_data(combined_df, macrocategory):
     plt.close()
 
 
-
 def generate_single_plots(lines):
     # Extract all tables
     tables = extract_table_data(lines)
@@ -287,11 +320,110 @@ def generate_all_plots_macrocat(lines):
     for macrocategory in macrocategories:
         plot_macrocategory_data(combined_df, macrocategory)
 
+# Cache for geocoding results
+geocode_cache = {}
+
+def geocode_with_retry(geolocator, location, retries=3, delay=1):
+    if location in geocode_cache:
+        return geocode_cache[location]
+    
+    for _ in range(retries):
+        try:
+            loc = geolocator.geocode(location, timeout=10)
+            if loc:
+                geocode_cache[location] = loc
+                return loc
+        except (GeocoderTimedOut, GeocoderServiceError) as e:
+            print(f"Geocoding error for {location}: {e}")
+            time.sleep(delay)
+    return None
+
+def visualize_locations(lines):
+        # Extract all tables
+    tables = extract_table_data(lines)
+    # Combine data for all conferences
+    combined_data = []
+    # Define the number of unique categories
+    for (conference_name,short_conf_name), table_data in tables.items():
+        df = create_dataframe_location(table_data)
+        df['Conference'] = short_conf_name
+        combined_data.append(df)
+
+    combined_df = pd.concat(combined_data).reset_index(drop=True)
+    # Filter out rows where the city is "Virtual" and the country is "Event"
+    combined_df = combined_df[~((combined_df['Type'] == 'City') & (combined_df['Location'] == 'Virtual'))]
+    combined_df = combined_df[~((combined_df['Type'] == 'Country') & (combined_df['Location'] == 'Event'))]
+
+    # Count the occurrences of each city and country
+    city_counts = combined_df[combined_df['Type'] == 'City']['Location'].value_counts().head(10)
+    country_counts = combined_df[combined_df['Type'] == 'Country']['Location'].value_counts().head(10)
+
+    # Print the counts
+    print("City counts:")
+    for city, count in city_counts.items():
+        print(f"{city}: {count}")
+
+    print("\nCountry counts:")
+    for country, count in country_counts.items():
+        print(f"{country}: {count}")
+    
+    
+    # Print the top 5 locations for each conference
+    conferences = combined_df['Conference'].unique()
+    for conference in conferences:
+        print(f"\nTop 5 locations for {conference}:")
+        conference_df = combined_df[combined_df['Conference'] == conference]
+        city_counts = conference_df[conference_df['Type'] == 'City']['Location'].value_counts().head(5)
+        country_counts = conference_df[conference_df['Type'] == 'Country']['Location'].value_counts().head(5)
+        
+        print("Cities:")
+        for city, count in city_counts.items():
+            print(f"{city}: {count}")
+        
+        print("Countries:")
+        for country, count in country_counts.items():
+            print(f"{country}: {count}")
+
+
+    # Initialize the map
+    m = folium.Map(location=[20, 0], zoom_start=2)
+
+    # Create a marker cluster
+    marker_cluster = MarkerCluster().add_to(m)
+
+    # Geolocator
+    geolocator = Nominatim(user_agent="geoapiExercises")
+
+    # Assign colors to conferences
+    conferences = combined_df['Conference'].unique()
+    colors = sns.color_palette("hsv", len(conferences)).as_hex()
+    conference_colors = dict(zip(conferences, colors))
+
+    # Add markers to the map
+    for _, row in tqdm(combined_df.iterrows()):
+        location = row['Location']
+        conference = row['Conference']
+        year = row['Year']
+        color = conference_colors[conference]
+
+        # Geocode the location with retry
+        loc = geocode_with_retry(geolocator, location)
+        if loc:
+            folium.Marker(
+                location=[loc.latitude, loc.longitude],
+                popup=f"{conference} ({year})",
+                icon=folium.Icon(color=color)
+            ).add_to(marker_cluster)
+
+    # Save the map
+    m.save("graphs/locations_map.html")
+
 if __name__ == '__main__':
     # Read the markdown file
-    with open('README.md', 'r') as f:
+    with open('README.md', 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
         generate_single_plots(lines)
         generate_all_plots(lines)
         generate_all_plots_macrocat(lines)
+        # visualize_locations(lines)
