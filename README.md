@@ -2,6 +2,55 @@
 
 <img src="graphs/combined_plot.png" alt="">
 
+<div style="display: flex; gap: 2rem;">
+
+<div>
+  
+### Top Cities
+
+| City          | Count |
+| ------------- | ----- |
+| Vancouver     | 10    |
+| Singapore     | 6     |
+| Los Angeles   | 5     |
+| New Orleans   | 5     |
+| San Francisco | 4     |
+| Long Beach    | 4     |
+| Sydney        | 3     |
+| New York      | 3     |
+| Seoul         | 3     |
+| Stockholm | 3 |
+</div>
+
+<div>
+  
+### Top Countries
+
+| Country     | Count |
+| ----------- | ----- |
+| USA         | 53    |
+| Canada      | 17    |
+| Australia   | 7     |
+| France      | 7     |
+| Italy       | 6     |
+| China       | 6     |
+| Singapore   | 6     |
+| Spain       | 4     |
+| South Korea | 3     |
+| Greece      | 3 |
+</div>
+
+</div>
+
+<img src="graphs/maps/conference_map_geopandas.png" alt="">
+
+<!-- <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+  <img src="graphs/maps/conference_map_geopandas_europe.png" alt="Top Left" style="max-width: 100%; height: auto;">
+  <img src="graphs/maps/conference_map_geopandas_americas.png" alt="Top Right" style="max-width: 100%; height: auto;">
+  <img src="graphs/maps/conference_map_geopandas_asia.png" alt="Bottom Left" style="max-width: 100%; height: auto;">
+  <img src="graphs/maps/conference_map_geopandas_australia.png" alt="Bottom Right" style="max-width: 100%; height: auto;">
+</div> -->
+
 ## Computer Vision and Pattern Recognition 👁️
 
 | Name | Publication Title | Category | H5-Index | Review Time (days) | Submission to acceptance (days) | Accept. Rate |
@@ -48,7 +97,7 @@
 | Year | 2014 | 2016 | 2018 | 2020 | 2022 | 2024 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Accept. Rate** | 27.9% (363/1444) | 26.6% (415/1561) | 31.8% (776/2439) | 27.1% (1361/5025) | 19.9% (1629/8170) | 27.9% (2395/8585) |
-| **Location** | Zürich, Switzerland | Amsterdam, Netherlands | Munich, Germany | Virtual, Event | Tel Aviv, Israel | Milan, Italy |
+| **Location** | Zurich, Switzerland | Amsterdam, Netherlands | Munich, Germany | Virtual, Event | Tel Aviv, Israel | Milan, Italy |
 
 <img src="graphs/singles/eccv.png" alt="">
 

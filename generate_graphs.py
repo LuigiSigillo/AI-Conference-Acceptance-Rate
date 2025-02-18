@@ -11,6 +11,8 @@ from geopy.geocoders import Nominatim
 from tqdm import tqdm
 import random
 import numpy as np
+from selenium import webdriver
+
 def remove_emoji(text):
     emoji_pattern = re.compile(
         "["
@@ -320,110 +322,317 @@ def generate_all_plots_macrocat(lines):
     for macrocategory in macrocategories:
         plot_macrocategory_data(combined_df, macrocategory)
 
-# Cache for geocoding results
+import matplotlib.colors as mcolors
+
+# # Caching geocoded locations to avoid redundant API calls
 geocode_cache = {}
 
-def geocode_with_retry(geolocator, location, retries=3, delay=1):
+def get_coordinates(location):
+    """Convert location (City, Country) to latitude and longitude."""
     if location in geocode_cache:
-        return geocode_cache[location]
-    
-    for _ in range(retries):
-        try:
-            loc = geolocator.geocode(location, timeout=10)
-            if loc:
-                geocode_cache[location] = loc
-                return loc
-        except (GeocoderTimedOut, GeocoderServiceError) as e:
-            print(f"Geocoding error for {location}: {e}")
-            time.sleep(delay)
-    return None
+        return geocode_cache[location]  # Return cached value
 
-def visualize_locations(lines):
-        # Extract all tables
-    tables = extract_table_data(lines)
-    # Combine data for all conferences
-    combined_data = []
-    # Define the number of unique categories
-    for (conference_name,short_conf_name), table_data in tables.items():
-        df = create_dataframe_location(table_data)
-        df['Conference'] = short_conf_name
-        combined_data.append(df)
-
-    combined_df = pd.concat(combined_data).reset_index(drop=True)
-    # Filter out rows where the city is "Virtual" and the country is "Event"
-    combined_df = combined_df[~((combined_df['Type'] == 'City') & (combined_df['Location'] == 'Virtual'))]
-    combined_df = combined_df[~((combined_df['Type'] == 'Country') & (combined_df['Location'] == 'Event'))]
-
-    # Count the occurrences of each city and country
-    city_counts = combined_df[combined_df['Type'] == 'City']['Location'].value_counts().head(10)
-    country_counts = combined_df[combined_df['Type'] == 'Country']['Location'].value_counts().head(10)
-
-    # Print the counts
-    print("City counts:")
-    for city, count in city_counts.items():
-        print(f"{city}: {count}")
-
-    print("\nCountry counts:")
-    for country, count in country_counts.items():
-        print(f"{country}: {count}")
-    
-    
-    # Print the top 5 locations for each conference
-    conferences = combined_df['Conference'].unique()
-    for conference in conferences:
-        print(f"\nTop 5 locations for {conference}:")
-        conference_df = combined_df[combined_df['Conference'] == conference]
-        city_counts = conference_df[conference_df['Type'] == 'City']['Location'].value_counts().head(5)
-        country_counts = conference_df[conference_df['Type'] == 'Country']['Location'].value_counts().head(5)
-        
-        print("Cities:")
-        for city, count in city_counts.items():
-            print(f"{city}: {count}")
-        
-        print("Countries:")
-        for country, count in country_counts.items():
-            print(f"{country}: {count}")
-
-
-    # Initialize the map
-    m = folium.Map(location=[20, 0], zoom_start=2)
-
-    # Create a marker cluster
-    marker_cluster = MarkerCluster().add_to(m)
-
-    # Geolocator
-    geolocator = Nominatim(user_agent="geoapiExercises")
-
-    # Assign colors to conferences
-    conferences = combined_df['Conference'].unique()
-    colors = sns.color_palette("hsv", len(conferences)).as_hex()
-    conference_colors = dict(zip(conferences, colors))
-
-    # Add markers to the map
-    for _, row in tqdm(combined_df.iterrows()):
-        location = row['Location']
-        conference = row['Conference']
-        year = row['Year']
-        color = conference_colors[conference]
-
-        # Geocode the location with retry
-        loc = geocode_with_retry(geolocator, location)
+    geolocator = Nominatim(user_agent="geo_mapper")
+    try:
+        time.sleep(1)  # Avoid hitting API limits
+        loc = geolocator.geocode(location)
         if loc:
-            folium.Marker(
-                location=[loc.latitude, loc.longitude],
-                popup=f"{conference} ({year})",
-                icon=folium.Icon(color=color)
-            ).add_to(marker_cluster)
+            geocode_cache[location] = (loc.latitude, loc.longitude)
+            return loc.latitude, loc.longitude
+    except GeocoderTimedOut:
+        print(f"Geocoding timed out for: {location}")
+    return None, None  # Return None if not found
+    
+def get_conference_colors(conferences):
+    """Assign a unique color to each conference."""
+    color_list = list(mcolors.TABLEAU_COLORS.keys())  # Use predefined colors
+    random.shuffle(color_list)  # Shuffle to distribute colors randomly
+    return {conf: color_list[i % len(color_list)] for i, conf in enumerate(conferences)}
+# def save_map_as_png(html_file, output_file):
+#     """Convert Folium HTML map to PNG using Selenium."""
+#     options = webdriver.ChromeOptions()
+#     options.add_argument("--headless")
+#     options.add_argument("--window-size=1200x800")  # Set window size for full capture
 
-    # Save the map
-    m.save("graphs/locations_map.html")
+#     driver = webdriver.Chrome(options=options)
+#     driver.get(f"file://{html_file}")
+
+#     # Wait to ensure map is fully loaded
+#     time.sleep(3)
+
+#     # Save screenshot
+#     driver.save_screenshot(output_file)
+#     driver.quit()
+#     print(f"Map saved as {output_file}")
+
+# def add_legend(map_, conference_colors):
+#     """Add a legend to the Folium map."""
+#     legend_html = '''
+#     <div style="position: fixed; 
+#                 bottom: 50px; left: 50px; width: 200px; height: auto; 
+#                 background-color: white; z-index:9999; font-size:14px;
+#                 border:2px solid grey; padding: 10px;">
+#     <h4>Conference Colors</h4>
+#     '''
+#     for conf, color in conference_colors.items():
+#         legend_html += f'<i style="background:{color};width:20px;height:20px;display:inline-block;"></i> {conf}<br>'
+#     legend_html += '</div>'
+#     map_.get_root().html.add_child(folium.Element(legend_html))
+
+# def visualize_locations(lines, save_as_png=True, output_file="conference_map.png"):
+#         # Extract all tables
+#     tables = extract_table_data(lines)
+#     # Combine data for all conferences
+#     combined_data = []
+#     for (conference_name, short_conf_name), table_data in tables.items():
+#         df = create_dataframe_location(table_data)
+#         df['Conference'] = short_conf_name
+#         df['Year'] = df['Year'].astype(str)  # Ensure year is string for labeling
+#         # df['Lat'], df['Lon'] = zip(*df['Location'].apply(get_coordinates))  # Geocode locations
+#         combined_data.append(df)
+
+#     combined_df = pd.concat(combined_data).reset_index(drop=True)
+#     # Filter out rows where the city is "Virtual" and the country is "Event"
+#     combined_df = combined_df[~((combined_df['Type'] == 'City') & (combined_df['Location'] == 'Virtual'))]
+#     combined_df = combined_df[~((combined_df['Type'] == 'Country') & (combined_df['Location'] == 'Event'))]
+#     # Apply geocoding only to locations with Type == 'City'
+#     city_df = combined_df[combined_df['Type'] == 'City'].copy()
+#     city_df['Lat'], city_df['Lon'] = zip(*city_df['Location'].apply(get_coordinates))
+#     combined_df = combined_df.merge(city_df[['Location', 'Lat', 'Lon']], on='Location', how='left')
+
+#     # Count the occurrences of each city and country
+#     city_counts = combined_df[combined_df['Type'] == 'City']['Location'].value_counts().head(10)
+#     country_counts = combined_df[combined_df['Type'] == 'Country']['Location'].value_counts().head(10)
+
+#     # Print the counts
+#     print("City counts:")
+#     for city, count in city_counts.items():
+#         print(f"{city}: {count}")
+
+#     print("\nCountry counts:")
+#     for country, count in country_counts.items():
+#         print(f"{country}: {count}")
+    
+    
+#     # Print the top 5 locations for each conference
+#     conferences = combined_df['Conference'].unique()
+#     for conference in conferences:
+#         print(f"\nTop 5 locations for {conference}:")
+#         conference_df = combined_df[combined_df['Conference'] == conference]
+#         city_counts = conference_df[conference_df['Type'] == 'City']['Location'].value_counts().head(5)
+#         country_counts = conference_df[conference_df['Type'] == 'Country']['Location'].value_counts().head(5)
+        
+#         print("Cities:")
+#         for city, count in city_counts.items():
+#             print(f"{city}: {count}")
+        
+#         print("Countries:")
+#         for country, count in country_counts.items():
+#             print(f"{country}: {count}")
+
+
+#     # Assign colors to conferences
+#     combined_df = combined_df.dropna(subset=['Lat', 'Lon'])
+#     conference_colors = get_conference_colors(combined_df['Conference'].unique())
+
+#     # Create a folium map centered around a reasonable default
+#     map_center = [combined_df["Lat"].mean(), combined_df["Lon"].mean()]
+#     map_ = folium.Map(location=map_center, zoom_start=2)
+
+#     # Add markers
+#     for _, row in combined_df.iterrows():
+#         conf_name = row['Conference']
+#         year = row['Year']
+#         location = row['Location']
+#         lat, lon = row['Lat'], row['Lon']
+#         color = conference_colors[conf_name]
+#         if location is not None:
+#             # Create a marker with the conference name and year
+#             folium.Marker(
+#                 location=[lat, lon],
+#                 popup=f"{conf_name} {year} ({location})",
+#                 icon=folium.Icon(color=color)
+#             ).add_to(map_)
+#     # Add legend to the map
+#     add_legend(map_, conference_colors)
+#     # Save as HTML
+#     html_file = "conference_map.html"
+#     map_.save(html_file)
+
+#     if save_as_png:
+#         # Convert HTML to PNG using Selenium
+#         save_map_as_png(html_file, output_file)
+
+#     return map_
+
+import geopandas as gpd
+from shapely.geometry import Point
+
+def visualize_locations_geopandas(lines, output_file="graphs/maps/conference_map_geopandas.png"):
+    # Extract location tables for geocoding
+    tables = extract_table_data(lines)
+    location_data = []
+    submission_data = []
+    for (conference_name, short_conf_name), table_data in tables.items():
+        # For location data (used for geocoding)
+        df_loc = create_dataframe_location(table_data)
+        df_loc['Conference'] = short_conf_name
+        df_loc['Year'] = df_loc['Year'].astype(str)
+        location_data.append(df_loc)
+
+        # Also extract submission data from the acceptance table
+        df_sub = create_dataframe(table_data)
+        df_sub['Conference'] = short_conf_name
+        submission_data.append(df_sub)
+    
+    # Build DataFrames
+    loc_df = pd.concat(location_data).reset_index(drop=True)
+    sub_df = pd.concat(submission_data).reset_index(drop=True)
+    
+
+    
+    # Count the occurrences of each city and country
+    city_counts = loc_df[loc_df['Type'] == 'City']['Location'].value_counts().head(11)
+    country_counts = loc_df[loc_df['Type'] == 'Country']['Location'].value_counts().head(11)
+
+    # Print the counts in Markdown table format
+
+    print("### City Counts")
+    print("| City | Count |")
+    print("| --- | --- |")
+    for city, count in city_counts.items():
+        print(f"| {city} | {count} |")
+
+    print("\n### Country Counts")
+    print("| Country | Count |")
+    print("| --- | --- |")
+    for country, count in country_counts.items():
+        print(f"| {country} | {count} |")
+
+
+    # Print Markdown tables for the top 5 locations for each conference
+    # conferences = sub_df['Conference'].unique()
+    # for conference in conferences:
+    #     print(f"\n#### Top 5 Locations for {conference}")
+    #     # Cities table
+    #     print("\n**Cities:**")
+    #     print("| City | Count |")
+    #     print("| --- | --- |")
+    #     conference_df = loc_df[loc_df['Conference'] == conference]
+    #     city_counts_top = conference_df[conference_df['Type'] == 'City']['Location'].value_counts().head(5)
+    #     for city, count in city_counts_top.items():
+    #         print(f"| {city} | {count} |")
+        
+    #     # Countries table
+    #     print("\n**Countries:**")
+    #     print("| Country | Count |")
+    #     print("| --- | --- |")
+    #     country_counts_top = conference_df[conference_df['Type'] == 'Country']['Location'].value_counts().head(5)
+    #     for country, count in country_counts_top.items():
+    #         print(f"| {country} | {count} |")
+   
+    # Compute top 10 conferences by submissions
+    sub_df['Value'] = pd.to_numeric(sub_df['Value'], errors='coerce')
+    total_submissions = sub_df[sub_df['Type'] == 'Total']
+    top_conferences = total_submissions.groupby('Conference')['Value'].sum().nlargest(10).index.tolist()
+    # Filter location data to only those top conferences
+    loc_df = loc_df[loc_df['Conference'].isin(top_conferences)]
+    
+    # Filter out unwanted rows
+    loc_df = loc_df[~((loc_df['Type'] == 'City') & (loc_df['Location'] == 'Virtual'))]
+    loc_df = loc_df[~((loc_df['Type'] == 'Country') & (loc_df['Location'] == 'Event'))]
+    
+    # Geocode only locations with Type == 'City'
+    city_df = loc_df[loc_df['Type'] == 'City'].copy()
+    coords = city_df['Location'].apply(lambda loc: get_coordinates(loc) or (None, None))
+    city_df['Lat'], city_df['Lon'] = zip(*coords)
+    loc_df = loc_df.merge(city_df[['Location', 'Lat', 'Lon']], on='Location', how='left')
+    loc_df = loc_df.dropna(subset=['Lat', 'Lon'])
+    
+    # Assign colors to conferences (only for those in the top 10)
+    conference_colors = get_conference_colors(loc_df['Conference'].unique())
+    
+    # Create a GeoDataFrame using the conference locations
+    geometry = [Point(lon, lat) for lon, lat in zip(loc_df['Lon'], loc_df['Lat'])]
+    gdf = gpd.GeoDataFrame(loc_df, geometry=geometry, crs="EPSG:4326")
+    
+    # Load a world map from an external GeoJSON resource
+    world = gpd.read_file("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")    
+    
+    # Plot the world map and each conference's locations with its unique color
+    fig, ax = plt.subplots(1, 1, figsize=(15, 10))
+    world.plot(ax=ax, color='lightgrey', edgecolor='white')
+    
+    for conf in gdf['Conference'].unique():
+        conf_gdf = gdf[gdf['Conference'] == conf]
+        conf_gdf.plot(
+            ax=ax,
+            markersize=100,
+            marker='o',
+            color=conference_colors[conf],
+            label=conf,
+            alpha=0.7
+        )
+    
+    ax.set_title("Top 10 Conference Locations by Submissions")
+    ax.set_xlabel("Longitude")
+    ax.set_ylabel("Latitude")
+    ax.legend(title="Conference")
+    
+    plt.savefig(output_file, dpi=300, bbox_inches='tight', pad_inches=0)
+    # plt.show()
+    # Define bounding boxes for continents
+    # Define bounding boxes for continents, including Africa and Australia
+    continents = {
+        "Americas": {"lon_min": -170, "lon_max": -30, "lat_min": -60, "lat_max": 75},
+        "Europe": {"lon_min": -25, "lon_max": 40, "lat_min": 34, "lat_max": 72},
+        "Asia": {"lon_min": 25, "lon_max": 180, "lat_min": 5, "lat_max": 80},
+        "Africa": {"lon_min": -20, "lon_max": 55, "lat_min": -35, "lat_max": 38},
+        "Australia": {"lon_min": 110, "lon_max": 155, "lat_min": -45, "lat_max": -10},
+    }
+    
+    # Create separate maps for each continent
+    for cont, bounds in continents.items():
+        fig, ax = plt.subplots(1, 1, figsize=(15, 10))
+        # Plot world countries and limit the view to the bounding box
+        world.plot(ax=ax, color='lightgrey', edgecolor='white')
+        ax.set_xlim(bounds["lon_min"], bounds["lon_max"])
+        ax.set_ylim(bounds["lat_min"], bounds["lat_max"])
+        
+        # Filter conference points within the bounding box
+        cont_points = gdf[
+            (gdf['Lon'] >= bounds["lon_min"]) &
+            (gdf['Lon'] <= bounds["lon_max"]) &
+            (gdf['Lat'] >= bounds["lat_min"]) &
+            (gdf['Lat'] <= bounds["lat_max"])
+        ]
+        
+        for conf in cont_points['Conference'].unique():
+            conf_gdf = cont_points[cont_points['Conference'] == conf]
+            conf_gdf.plot(
+                ax=ax,
+                markersize=100,
+                marker='o',
+                color=conference_colors[conf],
+                label=conf,
+                alpha=0.7
+            )
+        
+        ax.set_title(f"Top 10 Conference Locations in {cont}")
+        ax.set_xlabel("Longitude")
+        ax.set_ylabel("Latitude")
+        ax.legend(title="Conference")
+        
+        plt.savefig(f"graphs/maps/conference_map_geopandas_{cont.lower()}.png", dpi=300, bbox_inches='tight', pad_inches=0)
+        plt.close()
+
 
 if __name__ == '__main__':
     # Read the markdown file
     with open('README.md', 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-        generate_single_plots(lines)
-        generate_all_plots(lines)
-        generate_all_plots_macrocat(lines)
-        # visualize_locations(lines)
+        # generate_single_plots(lines)
+        # generate_all_plots(lines)
+        # generate_all_plots_macrocat(lines)
+        visualize_locations_geopandas(lines)
