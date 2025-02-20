@@ -2,12 +2,13 @@
 
 <img src="graphs/combined_plot.png" alt="">
 
+
+<details>
+  <summary><b><font size="12">Geographic Stats</font></b></summary>
 <div style="display: flex; gap: 2rem;">
 
 <div>
 
-<details>
-  <summary><b><font size="10">Geographic Stats</font></b></summary>
   
 ## Top Cities
 
@@ -46,6 +47,7 @@
 </div>
 
 <img src="graphs/maps/conference_map_geopandas.png" alt="">
+
 </details>
 
 <!-- <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
