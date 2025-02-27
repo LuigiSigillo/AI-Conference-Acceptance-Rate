@@ -78,10 +78,11 @@
 <details>
   <summary><b><font size="4">CVPR - Conference on Computer Vision and Pattern Recognition</font></b></summary>
 
-| Year       | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
+| Year       | 2014 | 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 |-----------|------|------|------|------|------|------|------|------|------|------|------|
-| **Accept. Rate**  | 29.9% (540/1807) | 28.3% (602/2123) | 29.9% (643/2145) | 29.9% (783/2620) | 29.6% (979/3303) | 25.0% (1294/5160) | 22.1% (1470/6656) | 23.7% (1663/7015) | 25.3% (2067/8161) | 25.8% (2360/9155) | 23.6% (2719/11532) |
-| **Location** | - | Boston, USA | Las Vegas, USA | Honolulu, USA | Salt Lake City, USA | Long Beach, USA | Virtual, Event | Virtual, Event | New Orleans, USA | Vancouver, Canada | Seattle, USA |
+| **Accept. Rate**  | 29.9% (540/1807) | 28.3% (602/2123) | 29.9% (643/2145) | 29.9% (783/2620) | 29.6% (979/3303) | 25.0% (1294/5160) | 22.1% (1470/6656) | 23.7% (1663/7015) | 25.3% (2067/8161) | 25.8% (2360/9155) | 23.6% (2719/11532) | 22.1% (2878/13008) |
+| **Location** | - | Boston, USA | Las Vegas, USA | Honolulu, USA | Salt Lake City, USA | Long Beach, USA | Virtual, Event | Virtual, Event | New Orleans, USA | Vancouver, Canada | Seattle, USA | Nashville, USA |
+
 <img src="graphs/singles/cvpr.png" alt="">
 
 </details>

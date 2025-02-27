@@ -44,7 +44,7 @@ def extract_table_data(lines):
         if line.startswith('##'):
             macrocategory = line.strip().replace('##', '').strip()
             macrocategory = remove_emoji(macrocategory)
-        elif '<summary>' in line:
+        elif '<summary>' in line and not "Geographic" in line:
             capture = True
             conference_name = re.search(r'<summary><b><font size="4">(.*?)</font></b></summary>', line).group(1)
             conference_name = conference_name.split("-")[0].strip()
@@ -632,7 +632,7 @@ if __name__ == '__main__':
     with open('README.md', 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-        # generate_single_plots(lines)
-        # generate_all_plots(lines)
-        # generate_all_plots_macrocat(lines)
+        generate_single_plots(lines)
+        generate_all_plots(lines)
+        generate_all_plots_macrocat(lines)
         visualize_locations_geopandas(lines)
